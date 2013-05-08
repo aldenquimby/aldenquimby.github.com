@@ -102,6 +102,9 @@
 
 					tbody.append(htmlRow);
         		});
+
+        		var expr = new RegExp('>[ \t\r\n\v\f]*<', 'g');
+ 				htmlTable.html(htmlTable.html().replace(expr, '><'));
         	}
 
     		// prettify the 'Product Size' info
