@@ -118,7 +118,6 @@
 
 			// turn html table into a datatable 
 			function vendingMachinesDataTable(table) {
-
 				table.dataTable({
 					"sDom": "<'row'<'span6'l><'span6'f>r>t<'row'<'span6'i><'span6'p>>", // specifies location of datatable controls
 					"sPaginationType": "bootstrap",
@@ -128,18 +127,16 @@
 					"sScrollY": "370px",  // max height of results
 					"iDisplayLength": 25, // initial results per page
 					"aLengthMenu": [[25, 50, -1], [25, 50, "All"]], // select options for results per page
-					"aoColumns": [ // columns specific info, like widths, searchability, visibility, etc.
-						{ "sWidth": "15%" },
-						{ "sWidth": "35%" },
-						{ "sWidth": "25%" },
-						{ "sWidth": "25%" },
-				    ]
+				    "aoColumnDefs": [ // columns specific info, like widths, searchability, visibility, etc.
+      					{ "sWidth": "15%", "aTargets": [ 0 ] },
+      					{ "sWidth": "25%", "aTargets": [ 2, 3 ] },
+      					{ "sWidth": "35%", "aTargets": [ 1 ] }
+    				]
 				});	
 			}
 
 			function wholeGrainsDataTable(table) {
-
-				var a = {
+				table.dataTable({
 					"sDom": "<'row'<'span6'l><'span6'f>r>t<'row'<'span6'i><'span6'p>>", // specifies location of datatable controls
 					"sPaginationType": "bootstrap",
 					"oLanguage": {
@@ -148,18 +145,12 @@
 					"sScrollY": "370px",  // max height of results
 					"iDisplayLength": 25, // initial results per page
 					"aLengthMenu": [[25, 50, -1], [25, 50, "All"]], // select options for results per page 
-					"aoColumns": [ // columns specific info, like widths, searchability, visibility, etc.
-						{ "sWidth": "15%" },
-						{ "sWidth": "30%" },
-						{ "sWidth": "15%" },
-						{ "sWidth": "20%" },
-						{ "sWidth": "20%" },
-				    ]
-				};
-
-				table.dataTable(
-
-				);	
+				    "aoColumnDefs": [ // columns specific info, like widths, searchability, visibility, etc.
+      					{ "sWidth": "15%", "aTargets": [ 0, 2 ] },
+      					{ "sWidth": "20%", "aTargets": [ 3, 4 ] },
+      					{ "sWidth": "30%", "aTargets": [ 1 ] }
+    				]
+				});	
 			}
 
         </script>
