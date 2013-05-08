@@ -18,7 +18,7 @@
         	}
         </style>
         <!-- scripts -->
-        <script type="text/javascript" src="scripts/jquery-1.8.3.min.js"></script>
+        <script type="text/javascript" src="scripts/jquery-1.9.1.min.js"></script>
         <script type="text/javascript" src="scripts/bootstrap.min.js"></script>
         <script type="text/javascript" src="scripts/jquery.dataTables.min.js"></script>
         <script type="text/javascript" src="scripts/jquery.csv.min.js"></script>
@@ -27,6 +27,8 @@
 
         	// on page load, get data from google and create our table
         	$(function() {
+
+    			alert('page load');
 
 				// google spreadsheet urls where we can get the data
         		var vendingMachineUrl = 'https://docs.google.com/spreadsheet/pub?key=0AhgeWcbPrqvOdGNqckRxd2FieXhZZFVSU3JvM1hHYkE&single=true&gid=0&output=csv';
@@ -56,6 +58,9 @@
 					wholeGrainsDataTable(table); // initialize datatable to allow sorting, searching, etc.
 					
     			});
+
+				alert('done with page load');    				
+
         	});
 
         	// fill the html table with data
