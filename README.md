@@ -1,2 +1,4 @@
-aldenquimby.github.com
+aldenquimby.github.io
 ======================
+
+All about me :)
