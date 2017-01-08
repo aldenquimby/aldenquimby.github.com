@@ -1,4 +1,4 @@
 aldenquimby.github.io
 ======================
 
-All about me :)
+Personal website
